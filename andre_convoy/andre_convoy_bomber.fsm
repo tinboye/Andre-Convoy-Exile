@@ -1,0 +1,458 @@
+/*%FSM<COMPILE "e:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, andre_bomberman">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"begin",0,250,225.000000,-400.000000,325.000000,-350.000000,0.000000,"begin"};
+item1[] = {"found_target",4,218,425.000000,-250.000000,525.000000,-200.000000,1.000000,"found target"};
+item2[] = {"true",8,218,225.000000,-325.000000,325.000000,-275.000000,0.000000,"true"};
+item3[] = {"search_target",2,250,225.000000,-250.000000,325.000000,-200.000000,0.000000,"search target"};
+item4[] = {"",7,210,371.000031,-229.000000,379.000000,-221.000000,0.000000,""};
+item5[] = {"search_again_",4,218,100.000000,-250.000000,200.000000,-200.000000,0.000000,"search" \n "again?"};
+item6[] = {"run_to_target",2,250,575.000000,-250.000000,675.000000,-200.000000,0.000000,"run to target"};
+item7[] = {"update_destine_",4,218,575.000000,-325.000000,675.000000,-275.000000,0.000000,"update" \n "destine?"};
+item8[] = {"Near_target_",4,218,800.000000,-250.000000,900.000000,-200.000000,1.000000,"Near target?"};
+item9[] = {"find_friends_nea",2,250,925.000000,-250.000000,1025.000000,-200.000000,0.000000,"find friends" \n "near"};
+item10[] = {"end",1,250,925.000000,-950.000000,1025.000000,-900.000000,0.000000,"end"};
+item11[] = {"target_died",4,218,575.000000,-150.000000,675.000000,-100.000000,2.000000,"target died"};
+item12[] = {"",7,210,271.000000,-129.000015,279.000000,-120.999977,0.000000,""};
+item13[] = {"explode",2,250,925.000000,-400.000000,1025.000000,-350.000000,0.000000,"explode"};
+item14[] = {"no_friends_near",4,218,925.000000,-325.000000,1025.000000,-275.000000,0.000000,"no friends" \n "near?"};
+item15[] = {"friends_near_",4,218,925.000000,-150.000000,1025.000000,-100.000000,1.000000,"friends" \n "near?"};
+item16[] = {"true",8,218,925.000000,-500.000000,1025.000000,-450.000000,0.000000,"true"};
+item17[] = {"wait",2,250,925.000000,-75.000000,1025.000000,-25.000000,0.000000,"wait"};
+item18[] = {"bomber_died_or_end",4,218,675.000000,-400.000000,775.000000,-350.000000,3.000000,"bomber died" \n "or end war"};
+item19[] = {"",7,210,720.999939,-228.999985,729.000061,-221.000031,0.000000,""};
+item20[] = {"bomber_died_or_end",4,218,325.000000,-575.000000,425.000000,-525.000000,2.000000,"bomber died" \n "or end war"};
+item21[] = {"",7,210,271.000031,-54.000015,278.999969,-45.999985,0.000000,""};
+item22[] = {"waited_",4,218,575.000000,-75.000000,675.000000,-25.000000,0.000000,"waited?"};
+item23[] = {"decide_end",2,250,675.000000,-575.000000,775.000000,-525.000000,0.000000,"decide end"};
+item24[] = {"bomber_is_dead_",4,218,825.000000,-575.000000,925.000000,-525.000000,1.000000,"bomber is" \n "dead?"};
+item25[] = {"",7,210,970.999939,-554.000000,979.000061,-546.000000,0.000000,""};
+item26[] = {"bomber_is_alive",4,218,675.000000,-650.000000,775.000000,-600.000000,0.000000,"bomber is" \n "alive?"};
+item27[] = {"wait_to_explode",2,250,675.000000,-725.000000,775.000000,-675.000000,0.000000,"wait to" \n "explode"};
+item28[] = {"",7,210,971.000000,-829.000000,979.000000,-821.000000,0.000000,""};
+item29[] = {"no_friends_near",4,218,525.000000,-725.000000,625.000000,-675.000000,1.000000,"no friends" \n "near?"};
+item30[] = {"friends_near_",4,218,825.000000,-725.000000,925.000000,-675.000000,0.000000,"friends near?"};
+item31[] = {"explode_1",2,4346,525.000000,-850.000000,625.000000,-800.000000,0.000000,"explode"};
+item32[] = {"true",8,218,825.000000,-850.000000,925.000000,-800.000000,0.000000,"true"};
+item33[] = {"bomber_is_dead_",4,218,675.000000,-800.000000,775.000000,-750.000000,2.000000,"bomber is" \n "dead?"};
+item34[] = {"",7,210,971.000000,-779.000000,979.000000,-771.000000,0.000000,""};
+link0[] = {0,2};
+link1[] = {1,6};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {3,5};
+link5[] = {4,1};
+link6[] = {4,20};
+link7[] = {5,3};
+link8[] = {6,7};
+link9[] = {6,11};
+link10[] = {6,19};
+link11[] = {7,6};
+link12[] = {8,9};
+link13[] = {9,14};
+link14[] = {9,15};
+link15[] = {11,12};
+link16[] = {12,3};
+link17[] = {13,16};
+link18[] = {14,13};
+link19[] = {15,17};
+link20[] = {16,25};
+link21[] = {17,22};
+link22[] = {18,23};
+link23[] = {19,8};
+link24[] = {19,18};
+link25[] = {20,23};
+link26[] = {21,12};
+link27[] = {22,21};
+link28[] = {23,24};
+link29[] = {23,26};
+link30[] = {24,25};
+link31[] = {25,34};
+link32[] = {26,27};
+link33[] = {27,29};
+link34[] = {27,30};
+link35[] = {27,33};
+link36[] = {28,10};
+link37[] = {29,31};
+link38[] = {30,27};
+link39[] = {31,32};
+link40[] = {32,28};
+link41[] = {33,34};
+link42[] = {34,28};
+globals[] = {25.000000,1,0,0,0,640,480,1,251,6316128,1,416.641479,1090.232666,-383.435547,-969.197021,974,847,1};
+window[] = {2,-1,-1,-1,-1,791,111,1319,111,3,1001};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "andre_bomberman";
+  class States
+  {
+    /*%FSM<STATE "begin">*/
+    class begin
+    {
+      name = "begin";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] begin"";" \n
+       "_toExplode = _this select 0;" \n
+       "_bomber = _this select 1;" \n
+       "_bomberGrp = _this select 2;" \n
+       "_friends = units _bomberGrp;" \n
+       "" \n
+       "_radFirst = 300;" \n
+       "_radOthers = 150;" \n
+       "" \n
+       "if (isNull _toExplode) then {" \n
+       "	_near = _bomber nearEntities [""CAManBase"",_radFirst];" \n
+       "	if (count _near > 0) then {" \n
+       "		_players = [];" \n
+       "		{if (isPlayer _x && alive _x) then {_players = _players + [_x];};} forEach _near;" \n
+       "		if (count _players > 0) then {" \n
+       "			_toExplode = _players call BIS_fnc_selectRandom;" \n
+       "		};" \n
+       "	};" \n
+       "};" \n
+       "" \n
+       "_bomber disableAI ""FSM"";" \n
+       "_bomber disableAI ""TARGET"";" \n
+       "_bomber disableAI ""AUTOTARGET"";" \n
+       "_bomber setSkill 0;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="search_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "search_target">*/
+    class search_target
+    {
+      name = "search_target";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] search target"";" \n
+       "_start = time;" \n
+       "_found = false;" \n
+       "" \n
+       "if (isNull _toExplode) then {" \n
+       "	_near = _bomber nearEntities [""CAManBase"",_radOthers];" \n
+       "	if (count _near > 0) then {" \n
+       "		_players = [];" \n
+       "		{if (isPlayer _x && alive _x) then {_players = _players + [_x];};} forEach _near;" \n
+       "		if (count _players > 0) then {" \n
+       "			_toExplode = _players call BIS_fnc_selectRandom;" \n
+       "			_found = true;" \n
+       "		};" \n
+       "	};" \n
+       "} else {" \n
+       "	_found = true;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "bomber_died_or_end">*/
+        class bomber_died_or_end
+        {
+          priority = 2.000000;
+          to="decide_end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _bomber || !(_bomberGrp getVariable [""donn_inWar"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "found_target">*/
+        class found_target
+        {
+          priority = 1.000000;
+          to="run_to_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_found"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "search_again_">*/
+        class search_again_
+        {
+          priority = 0.000000;
+          to="search_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time - _start > 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_start = time;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "run_to_target">*/
+    class run_to_target
+    {
+      name = "run_to_target";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] run to target"";" \n
+       "_start = time;" \n
+       "_dest = getPosATL _toExplode;" \n
+       "_bomber moveTo _dest;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "bomber_died_or_end">*/
+        class bomber_died_or_end
+        {
+          priority = 3.000000;
+          to="decide_end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _bomber || (!(_bomberGrp getVariable [""donn_inWar"",false]) && moveToCompleted _bomber)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "target_died">*/
+        class target_died
+        {
+          priority = 2.000000;
+          to="search_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _toExplode"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_toExplode = objNull;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Near_target_">*/
+        class Near_target_
+        {
+          priority = 1.000000;
+          to="find_friends_nea";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_bomber distance _toExplode < 10"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "update_destine_">*/
+        class update_destine_
+        {
+          priority = 0.000000;
+          to="run_to_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"moveToCompleted _bomber"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "find_friends_nea">*/
+    class find_friends_nea
+    {
+      name = "find_friends_nea";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] find friends near"";" \n
+       "_friendsNear = 0;" \n
+       "{" \n
+       "	if (alive _x) then {" \n
+       "		if (_bomber distance _x < 25 && alive _x) then {" \n
+       "			if !(_x getVariable [""donn_bomb"",false]) then {" \n
+       "				_friendsNear = _friendsNear + 1;" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "} forEach _friends;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "friends_near_">*/
+        class friends_near_
+        {
+          priority = 1.000000;
+          to="wait";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_friendsNear > 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "no_friends_near">*/
+        class no_friends_near
+        {
+          priority = 0.000000;
+          to="explode";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_friendsNear <= 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "end">*/
+    class end
+    {
+      name = "end";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] end"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "explode">*/
+    class explode
+    {
+      name = "explode";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] explode"";" \n
+       "[_bomber,""body"",1.5,_toExplode] call donn_casca_unit_HD_bomber;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "wait">*/
+    class wait
+    {
+      name = "wait";
+      init = /*%FSM<STATEINIT""">*/"_start = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "waited_">*/
+        class waited_
+        {
+          priority = 0.000000;
+          to="search_target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time - _start > 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_toExplode = objNull;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "decide_end">*/
+    class decide_end
+    {
+      name = "decide_end";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] decide end"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "bomber_is_dead_">*/
+        class bomber_is_dead_
+        {
+          priority = 1.000000;
+          to="end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _bomber"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "bomber_is_alive">*/
+        class bomber_is_alive
+        {
+          priority = 0.000000;
+          to="wait_to_explode";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"alive _bomber && moveToCompleted _bomber"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"//diag_log ""[FSM] salut forever"";" \n
+           "" \n
+           "_bomber playMove ""AmovPercMstpSrasWrflDnon_Salute"";" \n
+           "_bomber disableAI ""ANIM"";"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "wait_to_explode">*/
+    class wait_to_explode
+    {
+      name = "wait_to_explode";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] find friends near"";" \n
+       "" \n
+       "_start = time;" \n
+       "_friendsNear = 0;" \n
+       "{" \n
+       "	if (alive _x) then {" \n
+       "		if (_bomber distance _x < 35 && alive _x) then {" \n
+       "			if !(_x getVariable [""donn_bomb"",false]) then {" \n
+       "				_friendsNear = _friendsNear + 1;" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "} forEach _friends;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "bomber_is_dead_">*/
+        class bomber_is_dead_
+        {
+          priority = 2.000000;
+          to="end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _bomber"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "no_friends_near">*/
+        class no_friends_near
+        {
+          priority = 1.000000;
+          to="explode_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_friendsNear == 0 && time - _start > 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "friends_near_">*/
+        class friends_near_
+        {
+          priority = 0.000000;
+          to="wait_to_explode";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_friendsNear > 0 && time - _start > 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "explode_1">*/
+    class explode_1
+    {
+      name = "explode_1";
+      init = /*%FSM<STATEINIT""">*/"//diag_log ""[FSM] explode"";" \n
+       "[_bomber,""body"",1.5,_toExplode] call donn_casca_unit_HD_bomber;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="begin";
+  finalStates[] =
+  {
+    "end",
+  };
+};
+/*%FSM</COMPILE>*/
