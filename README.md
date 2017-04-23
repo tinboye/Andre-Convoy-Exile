@@ -12,7 +12,9 @@ There are some issues within exile where the soldiers do not fire back at player
 
 -add the andre_convoy folder to your Exile.mapname.pbo
 -if init.sqf exists add
-    ```execVM "andre_convoy\andre_convoy.sqf";```
+
+	execVM "andre_convoy\andre_convoy.sqf";
+
 -Edit andre_convoy\andre_convoy.sqf and set your convoy settings.
 
 -You will see ```_spawns = [```
@@ -23,5 +25,5 @@ There are some issues within exile where the soldiers do not fire back at player
 		//MapName (5)
 		[
 			[[vehicle spawn position],[nothing],spawn angle,spawn radius]
-		]```
+		]
 
